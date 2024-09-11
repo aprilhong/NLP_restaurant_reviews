@@ -38,11 +38,18 @@ nltk.download('averaged_perceptron_tagger_eng')
 
 st.title('Restaurant Reviews App')
 
+
+st.header('Write your review for the restaurant!')
+st.text_input("type your review here")
+
+
+
 # load the dataset
 def load_data():
     df = pd.read_csv("data/raw/Restaurant_Reviews.tsv", sep='\t')
     return df
 
+st.expander('Data')
 st.dataframe(load_data())
 
 def clean_data(df):
@@ -245,3 +252,6 @@ param_grid_dict = {
 }
 
 evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict,choose_score='accuracy',)
+
+
+
