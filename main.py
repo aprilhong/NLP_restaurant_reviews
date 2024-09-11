@@ -50,7 +50,7 @@ def get_tag(tag):
 def preprocess_word(word_list):
 
   # Remove stopwords
-  word_list = [word for word in word_list if word.lower() not in stopwords.words('english')]
+  word_list = [word.lower() for word in word_list if word not in stopwords.words('english')]
 
   # Remove punctuation
   word_list = [word for word in word_list if word.lower() not in string.punctuation]
@@ -65,9 +65,9 @@ def preprocess_word(word_list):
   wnl = WordNetLemmatizer()
   word_list = [wnl.lemmatize(word, pos=get_tag(tag)) for word, tag in word_tag]
 
-  # Stemming
-  stemmer = PorterStemmer()
-  word_list = [stemmer.stem(word) for word in word_list]
+  # # Stemming
+  # stemmer = PorterStemmer()
+  # word_list = [stemmer.stem(word) for word in word_list]
 
   return word_list
 
