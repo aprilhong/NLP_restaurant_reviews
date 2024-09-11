@@ -36,7 +36,7 @@ st.title('Restaurant Reviews Classification App')
 
 # load the dataset
 def load_data():
-    df = pd.read_csv("C:\Users\tunhi\OneDrive\Documents\Github\NLP_restaurant_reviews\data\raw\Restaurant_Reviews.tsv", sep='\t')
+    df = pd.read_csv("data/raw/Restaurant_Reviews.tsv", sep='\t')
     return df
 
 # preprocess the data
