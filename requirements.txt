@@ -5,4 +5,5 @@ numpy
 nltk
 scikit-learn
 streamlit
+wordcloud
 #-e.

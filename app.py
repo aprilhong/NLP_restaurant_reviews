@@ -32,11 +32,14 @@ import pandas as pd
 import numpy as np
 
 
-st.title('Restaurant Reviews Classification App')
+st.title('Restaurant Reviews App')
 
 # load the dataset
 def load_data():
     df = pd.read_csv("data/raw/Restaurant_Reviews.tsv", sep='\t')
     return df
+
+
+st.dataframe(load_data())
 
 # preprocess the data
