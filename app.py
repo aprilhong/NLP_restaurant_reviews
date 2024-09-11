@@ -113,7 +113,7 @@ def split_data():
 
     return X_train, X_test, y_train, y_test
 
-X_train, X_test, y_train, y_test = split_data()
+split_data() = X_train, X_test, y_train, y_test = 
 
 def evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict, choose_score='accuracy'):
     """
@@ -213,9 +213,8 @@ def evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict, c
     
     print('------------------------')
     print('\nMODEL SUMMARY')
-    return df
     st.dataframe(df)
-
+    return df
 
 
 
@@ -245,4 +244,4 @@ param_grid_dict = {
     }
 }
 
-evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict,choose_score='precision')
+evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict,choose_score='accuracy',)
