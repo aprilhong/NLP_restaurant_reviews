@@ -113,7 +113,7 @@ def split_data():
 
     return X_train, X_test, y_train, y_test
 
-split_data() = X_train, X_test, y_train, y_test = 
+X_train, X_test, y_train, y_test = split_data()
 
 def evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict, choose_score='accuracy'):
     """
