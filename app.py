@@ -37,9 +37,27 @@ st.title('Restaurant Reviews App')
 # load the dataset
 def load_data():
     df = pd.read_csv("data/raw/Restaurant_Reviews.tsv", sep='\t')
+    df.columns = ['text','label']
+
     return df
 
 
 st.dataframe(load_data())
 
+
+def clean_data():
+    df = df.dropna()
+    df.duplicated().sum() 
+    df = df.drop_duplicates(keep='first')
+    df.shape()
+
+
 # preprocess the data
+
+def train_model():
+    
+    # Load the dataset
+    df = load_data()
+    clean_data()
+
+    return df.shape
