@@ -34,6 +34,7 @@ import numpy as np
 
 nltk.download('stopwords')
 nltk.download('punkt_tab')
+nltk.download('worknet')
 nltk.download('averaged_perceptron_tagger_eng')
 
 st.title('Restaurant Reviews App')
