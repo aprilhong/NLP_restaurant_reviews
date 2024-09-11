@@ -39,9 +39,9 @@ nltk.download('averaged_perceptron_tagger_eng')
 st.title('Restaurant Reviews App')
 
 
-st.write('How was your experience at the restaurant?')
+st.subheader('How was your experience at the restaurant?')
 st.image('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
-st.text_input("Write your review for the restaurant!")
+st.text_input("Leave at review")
 
 
 
