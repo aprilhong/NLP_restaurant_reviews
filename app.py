@@ -45,7 +45,7 @@ def load_data():
 
 st.dataframe(load_data())
 
-def clean_data(df):
+def clean_data():
     """
     This function cleans the given DataFrame by renaming columns, removing null values, and removing duplicate rows.
 
@@ -58,7 +58,7 @@ def clean_data(df):
     df.columns = ['text','label']  # Rename columns to 'text' and 'label'
     df = df.dropna()  # Remove rows with null values
     df = df.drop_duplicates(keep='first')  # Remove duplicate rows, keeping the first occurrence
-
+    return df
 
 # preprocess the data
 def get_pos_tag(tag):
