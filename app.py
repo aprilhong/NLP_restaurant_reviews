@@ -35,6 +35,7 @@ import numpy as np
 # nltk.download('stopwords')
 # nltk.download('data')
 nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger_eng')
 
 st.title('Restaurant Reviews App')
 
@@ -106,8 +107,10 @@ def split_data():
     vectorizer = CountVectorizer()
     st.write('X')
     X = vectorizer.fit_transform(df['text'])
+    X
     st.write('y')
     y = df['label']
+    y
 
     # Split Data into Training and Testing Sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
