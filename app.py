@@ -25,15 +25,14 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split, GridSearchCV
 import sklearn.metrics as metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, classification_report,confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, precision_score, recall_score,confusion_matrix
 
 import streamlit as st
 import pandas as pd
 import numpy as np
 
 
-# nltk.download('stopwords')
-# nltk.download('data')
+nltk.download('stopwords')
 nltk.download('punkt_tab')
 nltk.download('averaged_perceptron_tagger_eng')
 
@@ -43,6 +42,8 @@ st.title('Restaurant Reviews App')
 def load_data():
     df = pd.read_csv("data/raw/Restaurant_Reviews.tsv", sep='\t')
     return df
+
+st.dataframe(load_data())
 
 def clean_data(df):
     """
