@@ -45,7 +45,7 @@ def load_data():
 
 st.dataframe(load_data())
 
-def clean_data():
+def clean_data(df):
     """
     This function cleans the given DataFrame by renaming columns, removing null values, and removing duplicate rows.
 
@@ -97,7 +97,7 @@ def preprocess_text(text):
 def split_data():
 
     df = load_data()
-    df = clean_data()
+    df = clean_data(df)
 
     # Apply Preprocessing
     df['text'] = df['text'].apply(preprocess_text)
