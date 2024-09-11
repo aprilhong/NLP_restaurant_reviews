@@ -44,18 +44,18 @@ def load_data():
 
 st.dataframe(load_data())
 
-
 def clean_data():
     df = df.dropna()
     df.duplicated().sum() 
     df = df.drop_duplicates(keep='first')
     df.shape()
 
+st.write(clean_data())
 
 # preprocess the data
 
 def train_model():
-    
+
     # Load the dataset
     df = load_data()
     clean_data()
