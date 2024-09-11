@@ -97,7 +97,7 @@ def preprocess_text(text):
 def split_data():
 
     df = load_data()
-    df = clean_data(df)
+    df = clean_data()
 
     # Apply Preprocessing
     df['text'] = df['text'].apply(preprocess_text)
