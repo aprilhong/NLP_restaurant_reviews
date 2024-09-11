@@ -49,12 +49,12 @@ def clean_data():
     df = df.dropna()
     df.duplicated().sum() 
     df = df.drop_duplicates(keep='first')
-    df.shape()
 
-st.write(clean_data(df))
+
+st.write(clean_data())
+
+
 # preprocess the data
-
-
 def get_pos_tag(tag):
     pos_map = {
         'NN': 'n', 'NNS': 'n', 'NNP': 'n', 'NNPS': 'n',
