@@ -1,8 +1,8 @@
 pandas
-matplotlib.pyplot
+matplotlib
 seaborn
 numpy
 nltk
 scikit-learn
 streamlit
--.e
+#-e.
