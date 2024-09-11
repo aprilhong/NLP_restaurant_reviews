@@ -40,18 +40,15 @@ def load_data():
 
     return df
 
-df= load_data()
-
+df = load_data()
 st.dataframe(df)
 
-def clean_data():
-    df.columns = ['text','label']
-    df = df.dropna()
-    df.duplicated().sum() 
-    df = df.drop_duplicates(keep='first')
-
-
-st.write(clean_data())
+#clean data
+df.columns = ['text','label']
+df = df.dropna() 
+df = df.drop_duplicates(keep='first')
+st.write('clean df')
+df.shape
 
 
 # preprocess the data
