@@ -114,6 +114,8 @@ def split_data():
     st.write('y_train')
     y_train
 
+st.write(split_data())
+
 def evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict, choose_score='accuracy'):
     """
     Evaluates a dictionary of models with hyperparameter tuning (optional) and outputs a table of results.
