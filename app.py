@@ -37,19 +37,23 @@ st.title('Restaurant Reviews App')
 # load the dataset
 def load_data():
     df = pd.read_csv("data/raw/Restaurant_Reviews.tsv", sep='\t')
-
     return df
 
-df = load_data()
-st.dataframe(df)
+def clean_data(df):
+    """
+    This function cleans the given DataFrame by renaming columns, removing null values, and removing duplicate rows.
 
-#clean data
-df.columns = ['text','label']
-df = df.dropna() 
-df = df.drop_duplicates(keep='first')
-st.write('clean df')
-df.shape
+    Parameters:
+    df (pandas.DataFrame): The input DataFrame containing restaurant reviews. It should have at least two columns: 'ReviewText' and 'Sentiment'.
 
+    Returns:
+    pandas.DataFrame: The cleaned DataFrame with the specified modifications.
+    """
+    df.columns = ['text','label']  # Rename columns to 'text' and 'label'
+    df = df.dropna()  # Remove rows with null values
+    df = df.drop_duplicates(keep='first')  # Remove duplicate rows, keeping the first occurrence
+
+    return df
 
 # preprocess the data
 def get_pos_tag(tag):
@@ -85,32 +89,30 @@ def preprocess_text(text):
 
 
 # Load and clean the dataset
-df = load_data()
-df = clean_data(df)
+def split_data():
 
-# Apply Preprocessing
-df['text'] = df['text'].apply(preprocess_text)
+    df = load_data()
+    df = clean_data(df)
 
-# Convert Text Data into Vectors
-vectorizer = CountVectorizer()
-X = vectorizer.fit_transform(df['text'])
-y = df['label']
+    # Apply Preprocessing
+    df['text'] = df['text'].apply(preprocess_text)
+    df.head()
 
-st.write('X')
-X
+    # Convert Text Data into Vectors
+    vectorizer = CountVectorizer()
+    st.write('X')
+    X = vectorizer.fit_transform(df['text'])
+    st.write('y')
+    y = df['label']
 
-st.write('y')
-y
+    # Split Data into Training and Testing Sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Split Data into Training and Testing Sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    st.write('X_train')
+    X_train
 
-
-st.write('X_train')
-X_train
-
-st.write('y_train')
-y_train
+    st.write('y_train')
+    y_train
 
 def evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict, choose_score='accuracy'):
     """
