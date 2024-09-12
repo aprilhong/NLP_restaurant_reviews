@@ -88,7 +88,7 @@ def main():
 
     if submit:
         prediction = model.predict(review)
-        st.write('Sentiment Score:', {prediction[0]})
+        st.write('Sentiment Score:', {prediction})
         if prediction == 1:
             st.write(":smiley: We're glad you enjoyed your visit. Thank you for the positive review!")
         else: 
