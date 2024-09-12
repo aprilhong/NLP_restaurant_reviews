@@ -275,8 +275,10 @@ def predict_model():
     review = st.text_input("Leave at review")
 
     # Preprocess the review
+
     words = word_tokenize(review)
-    words = preprocess_text(words)
+    words = pd.DataFrame(words)
+    words[0] = words[0].apply(preprocess_text)
 
     # Create a feature vector from the review
     feature = FreqDist(words)
