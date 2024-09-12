@@ -284,7 +284,7 @@ def predict_model():
     feature = FreqDist(words)
 
     # Predict the sentiment category
-    category = classifier.classify(feature)
+    category = classifier.predict(feature)
 
     # Print the predicted sentiment category
     st.write("your review is classified as" + category)
