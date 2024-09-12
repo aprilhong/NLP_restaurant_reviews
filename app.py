@@ -53,7 +53,7 @@ def preprocess_text(text):
 
 review = st.text_input('Enter your review')
 review = preprocess_text(review)
-cv = CountVectorizer()
+cv = pickle.load(open('vectorizer.pickle', 'rb'))
 review = cv.transform([review]).toarray()
 submit = st.button('Analyze')
 
