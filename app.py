@@ -54,7 +54,7 @@ def preprocess_text(text):
 review = st.text_input('Enter your review')
 review = preprocess_text(review)
 vectorizer = CountVectorizer()
-review = vectorizer.transform([review]).toarray()
+review = vectorizer.fit_transform([review]).toarray()
 submit = st.button('Analyze')
 
 # load the model
