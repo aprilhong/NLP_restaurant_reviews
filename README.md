@@ -2,5 +2,5 @@
 
 
 # Web Application
-<img src="image.png" width="350" >
-(https://restaurantreviewspredict.streamlit.app/)[https://restaurantreviewspredict.streamlit.app/]
+<img src="image.png" width="400" >
+https://restaurantreviewspredict.streamlit.app/
