@@ -67,7 +67,7 @@ if submit:
     if prediction == 1:
         st.write(":smiley: We're glad you enjoyed your visit. Thank you for the positive review!")
     else: 
-        st.write(":slightly_frowning_face: We apologize for your negative experience. We'll review your feedback to improve our service.")
+        st.write(":slightly_frowning_face: We apologize for your negative experience. We'll review your feedback and improve our service.")
 
 
 
