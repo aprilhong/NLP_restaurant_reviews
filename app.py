@@ -62,7 +62,7 @@ with open('models/model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 if submit:
-    prediction = model.predict(review)
+    prediction = model.predict([review])
     st.write(prediction)
     if prediction == 1:
         st.write("We're glad you enjoyed your visit!")
