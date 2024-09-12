@@ -1,6 +1,6 @@
 model name,best hyperparameters,accuracy,precision,recall
 Naive Bayes,,0.7800,0.7808,0.7800
+Random Forest,"{'max_depth': 6, 'n_estimators': 300}",0.7650,0.7713,0.7650
 Logistic Regression,,0.7650,0.7677,0.7650
-Random Forest,"{'max_depth': 6, 'n_estimators': 200}",0.7400,0.7530,0.7400
-Decision Tree,"{'max_depth': 2, 'min_samples_split': 2}",0.6200,0.6973,0.6200
+Decision Tree,"{'max_depth': 6, 'min_samples_split': 2}",0.6600,0.7157,0.6600
 K Neighbors,,0.6500,0.6547,0.6500
