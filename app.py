@@ -12,10 +12,10 @@ from nltk.tag import pos_tag
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
-nltk.download('punkt_tab')
-nltk.download('wordnet')
-nltk.download('stopwords')
-nltk.download('averaged_perceptron_tagger_eng')
+# nltk.download('punkt_tab')
+# nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('averaged_perceptron_tagger_eng')
 
 
 #App layout
