@@ -5,9 +5,6 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import pickle
 
-# from nltk.tokenize import word_tokenize
-# from nltk.tag import pos_tag
-
 # Load pre-trained model and vectorizer (outside button click)
 model = pickle.load(open('models/model.pkl', 'rb'))
 cv = pickle.load(open('models/vectorizer.pkl', 'rb'))
@@ -54,26 +51,6 @@ def preprocess_text(text):
     except Exception as e:
         print(f"Error during preprocessing: {e}")
         return text  # Return original text in case of error
-    
-# def preprocess_text(text):
-#     text = re.sub(r'[^\w\s]', '', text)  # Remove punctuation
-#     text = re.sub(r'\d+', '', text)  # Remove numbers
-
-#     # Tokenize text into words and POS tags
-#     tokens = nltk.word_tokenize(text)
-#     tagged_tokens = nltk.pos_tag(tokens)
-
-#     # Lemmatize words based on POS tags
-#     lemmatizer = WordNetLemmatizer()
-#     lemmatized_tokens = [lemmatizer.lemmatize(word.lower(), pos=get_pos_tag(tag)) for word, tag in tagged_tokens]
-
-#     # Remove stopwords
-#     filtered_tokens = [word for word in lemmatized_tokens if word not in set(stopwords.words('english'))]
-
-#     # Join tokens back into a string
-#     text = ' '.join(filtered_tokens)
-
-#     return text
 
 
 # Streamlit App Layout
