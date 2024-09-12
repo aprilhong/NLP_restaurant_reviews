@@ -26,6 +26,17 @@ submit = st.button('Analyze')
 #define vectorizer
 vectorizer = CountVectorizer()
 
+
+# Helper function to map NLTK POS tags to WordNet POS tags
+def get_pos_tag(tag):
+    pos_map = {
+        'NN': 'n', 'NNS': 'n', 'NNP': 'n', 'NNPS': 'n',
+        'VB': 'v', 'VBD': 'v', 'VBG': 'v', 'VBN': 'v', 'VBP': 'v', 'VBZ': 'v',
+        'JJ': 'a', 'JJR': 'a', 'JJS': 'a',
+        'RB': 'r', 'RBR': 'r', 'RBS': 'r'
+    }
+    return pos_map.get(tag, 'n')  # Default to noun if tag is not found
+
 def preprocess_text(text):
     text = re.sub(r'[^\w\s]', '', text)  # Remove punctuation
     text = re.sub(r'\d+', '', text)  # Remove numbers
