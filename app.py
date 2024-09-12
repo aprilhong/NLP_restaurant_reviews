@@ -65,7 +65,14 @@ with open('models/model.pkl', 'rb') as f:
 if submit:
     prediction = model.predict(review)
     if prediction == 1:
-        st.write("We're glad you enjoyed your visit. Thank you for the positive review!")
+        st.write(":smiley: We're glad you enjoyed your visit. Thank you for the positive review!")
     else: 
-        st.write("We apologize for your negative experience. We'll review your feedback to improve our service.")
-    
+        st.write(":slightly_frowning_face: We apologize for your negative experience. We'll review your feedback to improve our service.")
+
+
+
+st.divider()
+st.subheader('Image credit:')
+st.write('Creator: User Jay Wennington (@jaywennington) from Unsplash')
+st.write('Free to use under the Unsplash License: https://unsplash.com/license')
+st.write('https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA')
