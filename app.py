@@ -23,8 +23,10 @@ st.title('Restaurant Review Analysis')
 review = st.text_input('Enter your review')
 submit = st.button('Analyze')
 
-#define vectorizer
-vectorizer = CountVectorizer()
+# load the model
+with open('models/model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
 
 
 # Helper function to map NLTK POS tags to WordNet POS tags
@@ -57,14 +59,9 @@ def preprocess_text(text):
 
     return text
 
-
-# load the model
-with open('models/model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
 if submit:
     review = preprocess_text(review)
-    review = vectorizer.transform([review]).toarray()
+    review = CountVectorizer().transform([review]).toarray()
     prediction = model.predict(review)
     st.write(prediction)
     if prediction == 1:
