@@ -12,12 +12,6 @@ from nltk.tag import pos_tag
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
-# nltk.download('punkt_tab')
-# nltk.download('wordnet')
-# nltk.download('stopwords')
-# nltk.download('averaged_perceptron_tagger_eng')
-
-
 #App layout
 st.title('Restaurant Review Analysis')
 st.image('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
