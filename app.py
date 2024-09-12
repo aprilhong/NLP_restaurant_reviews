@@ -53,8 +53,8 @@ def preprocess_text(text):
 
 review = st.text_input('Enter your review')
 review = preprocess_text(review)
-# vectorizer = CountVectorizer()
-# review = vectorizer.fit_transform([review]).toarray()
+cv = CountVectorizer()
+review = cv.transform([review]).toarray()
 submit = st.button('Analyze')
 
 # load the model
@@ -62,7 +62,7 @@ with open('models/model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 if submit:
-    prediction = model.predict([review])
+    prediction = model.predict(review)
     st.write(prediction)
     if prediction == 1:
         st.write("We're glad you enjoyed your visit!")
