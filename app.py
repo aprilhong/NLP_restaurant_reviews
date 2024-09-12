@@ -20,6 +20,7 @@ nltk.download('averaged_perceptron_tagger_eng')
 
 #App layout
 st.title('Restaurant Review Analysis')
+st.image('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 
 def get_pos_tag(tag):
     pos_map = {
@@ -64,7 +65,7 @@ with open('models/model.pkl', 'rb') as f:
 if submit:
     prediction = model.predict(review)
     if prediction == 1:
-        st.write("Thank you for the positive review!")
+        st.write("We're glad you enjoyed your visit. Thank you for the positive review!")
     else: 
-        st.write("We apologize for you negative experience. We'll review your feedback to improve our service.")
+        st.write("We apologize for your negative experience. We'll review your feedback to improve our service.")
     
