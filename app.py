@@ -20,7 +20,7 @@ nltk.download('averaged_perceptron_tagger_eng')
 
 #App layout
 st.title('Restaurant Review Analysis')
-review = str(st.text_input('Enter your review'))
+review = st.text_input('Enter your review')
 submit = st.button('Analyze')
 
 #define vectorizer
