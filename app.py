@@ -1,16 +1,17 @@
 import streamlit as st
 import pickle
 
-# load the model
-model = pickle.load(open('models/model.pkl', 'rb'))
 
 st.title('Restaurant Review Analysis')
 
-tweet = st.text_input('Enter your review')
+review = st.text_input('Enter your review')
 
-submit = st.button('Predict')
+submit = st.button('Analyze')
+
+# load the model
+model = pickle.load(open('models/model.pkl', 'rb'))
 
 if submit:
-    prediction = model.predict([tweet])
+    prediction = model.predict([review])
     print(prediction[0])
     st.write(prediction[0])
