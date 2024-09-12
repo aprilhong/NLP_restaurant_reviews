@@ -222,7 +222,6 @@ def evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict, c
     
     print('------------------------')
     print('\nMODEL SUMMARY')
-    st.dataframe(df)
     return df
 
 
@@ -268,8 +267,9 @@ def predict_model():
     """
     # Load the trained classifier
     
-    with open('models/model.pkl', 'rb') as f:
-        classifier = pickle.load(f)
+    file = open('models/model.pkl', 'rb')
+    classifier = pickle.load(file)
+    file.close()
 
     # Get the review from the user interface
     review = st.text_input("Leave at review")
