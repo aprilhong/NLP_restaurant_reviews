@@ -62,7 +62,7 @@ def preprocess_text(text):
 if submit:
     review = preprocess_text(review)
     vectorizer = CountVectorizer()
-    review = vectorizer.fit_transform(review).toarray()
+    review = vectorizer.fit_transform([review]).toarray()
     prediction = model.predict(review)
     st.write(prediction)
     if prediction == 1:
