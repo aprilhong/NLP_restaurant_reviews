@@ -63,7 +63,6 @@ with open('models/model.pkl', 'rb') as f:
 
 if submit:
     prediction = model.predict(review)
-    st.write(prediction)
     if prediction == 1:
         st.write("Thank you for the positive review!")
     else: 
