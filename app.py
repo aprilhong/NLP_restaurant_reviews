@@ -20,7 +20,7 @@ nltk.download('averaged_perceptron_tagger_eng')
 
 #App layout
 st.title('Restaurant Review Analysis')
-review = st.text_input('Enter your review')
+review = str(st.text_input('Enter your review'))
 submit = st.button('Analyze')
 
 #define vectorizer
@@ -63,7 +63,7 @@ with open('models/model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 if submit:
-    review = preprocess_text([review])
+    review = preprocess_text(review)
     review = vectorizer.transform([review]).toarray()
     prediction = model.predict(review)
     st.write(prediction)
