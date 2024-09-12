@@ -14,6 +14,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.tag import pos_tag
 import string
+from nltk.probability import FreqDist
 
 # modeling
 import pickle
@@ -41,7 +42,10 @@ st.write('*This is a app to determine if your review for the restaurant is posit
 
 st.subheader('How was your experience at the restaurant?')
 st.image('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
-st.text_input("Leave at review")
+
+
+
+
 
 
 
@@ -255,5 +259,35 @@ with st.expander('Data'):
     evaluate_models(models, X_train, y_train, X_test, y_test, param_grid_dict,choose_score='accuracy',)
 
 
+def predict_model():
+    """
+    This function predicts the sentiment category (positive or negative) of a given review using a trained classifier.
 
-# def predict_model():
+    Parameters:
+    None
+
+    Returns:
+    str: The predicted sentiment category of the review.
+    """
+    # Load the trained classifier
+    
+    with open('models/model.pkl', 'rb') as f:
+        classifier = pickle.load(f)
+
+    # Get the review from the user interface
+    review = st.text_input("Leave at review")
+
+    # Preprocess the review
+    words = word_tokenize(review)
+    words = preprocess_text(words)
+
+    # Create a feature vector from the review
+    feature = FreqDist(words)
+
+    # Predict the sentiment category
+    category = classifier.classify(feature)
+
+    # Print the predicted sentiment category
+    st.write(f"your review is classified as {category}")
+
+
