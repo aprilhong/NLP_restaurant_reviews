@@ -1,8 +1,6 @@
 import streamlit as st
-import pickle
 
 # text preprocessing
-
 import re
 import nltk
 from nltk.corpus import stopwords
