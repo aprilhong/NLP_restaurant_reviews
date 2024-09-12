@@ -64,8 +64,8 @@ model = pickle.load(open('models/model.pkl', 'rb'))
 if submit:
     review = preprocess_text(review)
     review = vectorizer.transform([review]).toarray()
-    prediction = model.predict([review])
-    st.write(prediction[0])
+    prediction = model.predict(review)
+    st.write(prediction)
     if prediction == 1:
         st.write("We're glad you enjoyed your visit!")
     else: 
