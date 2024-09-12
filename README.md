@@ -15,7 +15,7 @@ Result
 
 # File Descriptions
 
-- (data/raw)[data/raw]: stores the raw, unprocessed data used for analysis
+- [data/raw](data/raw): stores the raw, unprocessed data used for analysis
 - models: folder containing all trained machine learning models and the results of model evaluation (accuracy)
   - model.pkl: pickle trained champion model
   - vectorizer.pkl: pickled file of the fitted vectorizer
