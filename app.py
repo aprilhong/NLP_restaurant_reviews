@@ -65,7 +65,7 @@ if submit:
     prediction = model.predict(review)
     st.write(prediction)
     if prediction == 1:
-        st.write("We're glad you enjoyed your visit!")
+        st.write("Thank you for the positive review!")
     else: 
-        st.write("Thank you for your feedback!")
+        st.write("We apologize for you negative experience. We'll review your feedback to improve our service.")
     
