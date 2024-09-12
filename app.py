@@ -12,6 +12,11 @@ from nltk.tag import pos_tag
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
+nltk.download('punkt_tab')
+nltk.download('wordnet')
+nltk.download('stopwords')
+
+
 #App layout
 st.title('Restaurant Review Analysis')
 review = st.text_input('Enter your review')
