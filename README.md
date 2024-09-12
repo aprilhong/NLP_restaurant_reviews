@@ -1,4 +1,12 @@
-# NLP_restaurant_reviews
+# Sentiment Analysis of Restaurant Reviews
+
+
+Data
+
+Task
+
+Result
+
 
 
 # Web Application
