@@ -20,16 +20,7 @@ nltk.download('averaged_perceptron_tagger_eng')
 
 #App layout
 st.title('Restaurant Review Analysis')
-review = st.text_input('Enter your review')
-submit = st.button('Analyze')
 
-# load the model
-with open('models/model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-
-
-# Helper function to map NLTK POS tags to WordNet POS tags
 def get_pos_tag(tag):
     pos_map = {
         'NN': 'n', 'NNS': 'n', 'NNP': 'n', 'NNPS': 'n',
@@ -59,10 +50,18 @@ def preprocess_text(text):
 
     return text
 
+
+review = st.text_input('Enter your review')
+review = preprocess_text(review)
+vectorizer = CountVectorizer()
+review = vectorizer.transform([review]).toarray()
+submit = st.button('Analyze')
+
+# load the model
+with open('models/model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
 if submit:
-    review = preprocess_text(review)
-    vectorizer = CountVectorizer()
-    review = vectorizer.transform([review]).toarray()
     prediction = model.predict(review)
     st.write(prediction)
     if prediction == 1:
