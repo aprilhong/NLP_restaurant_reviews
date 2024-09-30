@@ -1,8 +1,12 @@
 # :plate_with_cutlery: Sentiment Analysis of Restaurant Reviews :+1: :-1:
 
 
-### About the Data
-This dataset from [Kaggle](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews) contains real restaurant reviews with labels indicating whether the customer liked or disliked the restaurant. 
+### Project Summary
+
+Sentiment analysis of restaurant reviews provides valuable insights into customer satisfaction, identifies trends, improves service, informs marketing strategies, and helps analyze competition. For this project, I used [Kaggle's dataset](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews) containing real restaurant reviews with labels indicating whether the customer liked or disliked the restaurant. To prepare the text data for machine learning models, I applied text preprocessing techniques such as tokenization, lemmatization, stop word removal, and part of speech tagging. Next, I trained and evaluated the data using 5 different algorithms to classify customer reviews as positive or negative. Ultimately, the Navies Bayes emerged as the champion model. Lastly, I integrated model into a [ Streamlit Web Application](https://restaurantreviewspredict.streamlit.app/) to predict customer sentiment based on new reviews.
+
+
+
 
 
 ### Project Objective
@@ -10,7 +14,6 @@ This dataset from [Kaggle](https://www.kaggle.com/datasets/ziadmostafa1/restaura
 - Train a machine learning model to automatically determine if a review is positive or negative
 
 ### File Descriptions 
-<details><summary> expand/collapse </summary>
 
 - [data/raw](data/raw): stores the raw, unprocessed data used for analysis
   - [Restaurant_Reviews.tsv](data\raw\Restaurant_Reviews.tsv): raw dataset from [Kaggle](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews)
@@ -28,9 +31,6 @@ This dataset from [Kaggle](https://www.kaggle.com/datasets/ziadmostafa1/restaura
 
 complete work in [jupyter notebook](notebooks/01-ah-restaurant-review-prediction.ipynb)
 
-
-<details><summary>expand/collapse</summary>
-
 1. Import Libraries
 2. Load and Clean Data 
 3. Visualize Text Data
@@ -46,9 +46,6 @@ complete work in [jupyter notebook](notebooks/01-ah-restaurant-review-prediction
       - K Neighbors
 7. Make predication on new unseen data
 8. Compile machine learning pipeline in [app.py](app.py) to deploy on [streamlit](https://restaurantreviewspredict.streamlit.app/)
-</details>
-
-divier
 
 ### Web Application
 <a href="https://restaurantreviewspredict.streamlit.app/">
