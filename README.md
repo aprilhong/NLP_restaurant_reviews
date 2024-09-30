@@ -1,12 +1,11 @@
-# :plate_with_cutlery: Sentiment Analysis of Restaurant Reviews :+1: :-1:
+# :plate_with_cutlery: Sentiment Analysis of Restaurant Reviews: A Predictive Model :+1: :-1:
 
 
 ### Project Summary
 
 Sentiment analysis of restaurant reviews provides valuable insights into customer satisfaction, identifies trends, improves service, informs marketing strategies, and helps analyze competition. For this project, I used [Kaggle's dataset](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews) containing real restaurant reviews with labels indicating whether the customer liked or disliked the restaurant. To prepare the text data for machine learning models, I applied text preprocessing techniques such as tokenization, lemmatization, stop word removal, and part of speech tagging. Next, I trained and evaluated the data using 5 different algorithms to classify customer reviews as positive or negative. Ultimately, the Navies Bayes emerged as the champion model. Lastly, I integrated model into a [Streamlit Web Application](https://restaurantreviewspredict.streamlit.app/) to predict customer sentiment based on new reviews.
 
-Tools
-Skills: NLP Text Preprocessing, Lemmatization, Tokenization, Python, 
+**Tools/Skills**: *Natural Language Processing, Text Preprocessing, Lemmatization, Tokenization, Stop Word Removal, Naive Bayes Algorithm, Model Pipelines, Model Deployment, Python, Streamlit*
 
 <details><summary>File Descriptions </summary>
   
