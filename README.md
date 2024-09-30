@@ -3,18 +3,13 @@
 
 ### Project Summary
 
-Sentiment analysis of restaurant reviews provides valuable insights into customer satisfaction, identifies trends, improves service, informs marketing strategies, and helps analyze competition. For this project, I used [Kaggle's dataset](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews) containing real restaurant reviews with labels indicating whether the customer liked or disliked the restaurant. To prepare the text data for machine learning models, I applied text preprocessing techniques such as tokenization, lemmatization, stop word removal, and part of speech tagging. Next, I trained and evaluated the data using 5 different algorithms to classify customer reviews as positive or negative. Ultimately, the Navies Bayes emerged as the champion model. Lastly, I integrated model into a [ Streamlit Web Application](https://restaurantreviewspredict.streamlit.app/) to predict customer sentiment based on new reviews.
+Sentiment analysis of restaurant reviews provides valuable insights into customer satisfaction, identifies trends, improves service, informs marketing strategies, and helps analyze competition. For this project, I used [Kaggle's dataset](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews) containing real restaurant reviews with labels indicating whether the customer liked or disliked the restaurant. To prepare the text data for machine learning models, I applied text preprocessing techniques such as tokenization, lemmatization, stop word removal, and part of speech tagging. Next, I trained and evaluated the data using 5 different algorithms to classify customer reviews as positive or negative. Ultimately, the Navies Bayes emerged as the champion model. Lastly, I integrated model into a [Streamlit Web Application](https://restaurantreviewspredict.streamlit.app/) to predict customer sentiment based on new reviews.
 
+Tools
+Skills: NLP Text Preprocessing, Lemmatization, Tokenization, Python, 
 
-
-
-
-### Project Objective
-- Conduct a **Sentiment Analysis** to predict customer satisfaction
-- Train a machine learning model to automatically determine if a review is positive or negative
-
-### File Descriptions 
-
+<details><summary>File Descriptions </summary>
+  
 - [data/raw](data/raw): stores the raw, unprocessed data used for analysis
   - [Restaurant_Reviews.tsv](data\raw\Restaurant_Reviews.tsv): raw dataset from [Kaggle](https://www.kaggle.com/datasets/ziadmostafa1/restaurant-reviews)
 - [models](models): folder containing all trained machine learning models and the results of model evaluation (accuracy)
@@ -25,11 +20,15 @@ Sentiment analysis of restaurant reviews provides valuable insights into custome
 - [app.py](app.py): central file that loads data, interacts with models, and creates a user-friendly Streamlit interface.
 - [requirements.txt](requirements.txt): lists all the Python libraries and packages required to run project
 - [setup.py](setup.py): python script to handle downloading NLTK data
+  
 </details>
 
-### Methodologies 
+### Project Objective
+- Conduct a **Sentiment Analysis** to predict customer satisfaction
+- Train a machine learning model to automatically determine if a review is positive or negative
 
-complete work in [jupyter notebook](notebooks/01-ah-restaurant-review-prediction.ipynb)
+### Methodologies 
+Complete work in [jupyter notebook](notebooks/01-ah-restaurant-review-prediction.ipynb)
 
 1. Import Libraries
 2. Load and Clean Data 
